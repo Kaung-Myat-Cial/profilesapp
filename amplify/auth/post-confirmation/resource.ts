@@ -1,13 +1,6 @@
-import { defineAuth } from '@aws-amplify/backend';
-import { postConfirmation } from './post-confirmation/resource';
+import { defineFunction } from '@aws-amplify/backend';
 
-export const auth = defineAuth({
-  loginWith: {
-    email: true,
-  },
-  triggers: {
-    postConfirmation
-  }
+export const postConfirmation = defineFunction({
+  name: 'post-confirmation',
 });
-
 
